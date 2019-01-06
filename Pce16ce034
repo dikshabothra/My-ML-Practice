@@ -1,0 +1,13 @@
+import numpy as np
+import pandas as pd
+from pandas import Series,DataFrame
+ser1=Series([1,2,3],index='a','b','c'])
+print(ser1)
+ser1.drop('b')
+print ser1
+dframe1=DataFrame(np.arange(9).reshape((3,3)), index=['Delhi','Mumbai','Jaipur'],columns=['Population','Size','Year'])
+print(dframe1)
+dframe2=dframe1.drop('Year', axis=1)
+print(dframe2)
+dframe3=dframe1.drop('Mumbai',axis=0)
+print(dframe3)
